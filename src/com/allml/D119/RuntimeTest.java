@@ -17,9 +17,9 @@ public class RuntimeTest {
         //返回java虚拟机中可用的内存量
         System.out.println(r.freeMemory()/1024.0/1024.0);
         //用来启动某个程序
-        Process p = r.exec("D:\\ARDC\\ARDC.exe");
+//        Process p = r.exec("D:\\ARDC\\ARDC.exe");
 //        r.exec("cmd.exe");
-        Thread.sleep(5000);
-        p.destroy();
+//        Thread.sleep(5000);
+//        p.destroy();
     }
 }
