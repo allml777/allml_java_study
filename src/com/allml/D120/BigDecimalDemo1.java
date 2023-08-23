@@ -37,6 +37,7 @@ public class BigDecimalDemo1 {
         BigDecimal c7 = c5.divide(c6, 3, RoundingMode.HALF_UP);
 
         System.out.println(c7);
+        System.out.println(c7);
 
     }
 }
