@@ -1,8 +1,7 @@
-package com.allml.D129;
+package com.allml.D129.bean;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Doctor {
     private String doctorId;
