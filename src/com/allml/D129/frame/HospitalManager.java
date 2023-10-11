@@ -41,6 +41,9 @@ public class HospitalManager {
                 case "5":
                     setDoctorJob();
                     break;
+                case "6":
+                    showAllDoctorInfos();
+                    break;
                 default:
                     throw new IllegalStateException("Unexpected value: " + sc.next());
             }
@@ -48,6 +51,11 @@ public class HospitalManager {
     }
 
     private void setDoctorJob() {
+
+    }
+
+    private void showAllDoctorInfos() {
+
     }
 
     public void addDepartment() {
@@ -97,7 +105,7 @@ public class HospitalManager {
 
     public void addDoctor() {
         System.out.println("==========添加医生==========");
-        Doctor doctor = new Doctor();
+
         while (true) {
             System.out.println("请选择科室");
 //            for (int i = 0; i < allDepartments.size(); i++) {
@@ -113,6 +121,7 @@ public class HospitalManager {
 //            Department department = allDepartments.get(command - 1);
 
             Department department = getDepartmentByUser();
+            Doctor doctor = new Doctor();
             doctor.setDepartmentName(department.getName());
 
             doctor.setDoctorId(UUID.randomUUID().toString());
