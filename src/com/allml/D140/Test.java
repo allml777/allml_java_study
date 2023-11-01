@@ -11,7 +11,7 @@ public class Test {
         //set的常用方法基本都是collection的方法
 //        Set<Integer> set = new HashSet<>();//经典代码 相当于是set的一个代表集合 无序 不重复 无索引
 //        Set<Integer> linkedHashSet = new LinkedHashSet<>();//有序 不重复 无索引
-        Set<Integer> linkedHashSet = new TreeSet<>();//排序序 不重复 无索引
+        Set<Integer> linkedHashSet = new TreeSet<>();//排序 不重复 无索引
 //        set.add(666);
 //        set.add(666);
 //        set.add(666);
