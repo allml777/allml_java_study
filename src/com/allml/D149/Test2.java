@@ -21,9 +21,19 @@ public class Test2 {
         map.put("monan",185.4);
         map.put("boy",175.1);
         map.put("banana",190.4);
-        Stream.of(map);
+
+        Set<String> keys = map.keySet();
+        Stream<String> ks = keys.stream();
+
+        Collection<Double> values = map.values();
+        Stream<Double> vs = values.stream();
+
+        Set<Map.Entry<String, Double>> entries = map.entrySet();
+        Stream<Map.Entry<String, Double>> kvs = entries.stream();
+        kvs.filter(e-> e.getKey().contains("b")).forEach(e-> System.out.println("key:"+e.getKey()+"\t\tvalue:"+e.getValue()));
 
         String[] names2 = {"的方式","的萨芬","个别地方","阿斯顿","饿啊分","阿三的","和广泛的"};
-
+        Stream<String> stream2 = Arrays.stream(names2);
+        Stream<List<String>> stream3 = Stream.of(names);
     }
 }
