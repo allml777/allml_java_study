@@ -1,9 +1,6 @@
 package com.allml.D151.Q1;
 
-import com.allml.D137.People;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -14,11 +11,11 @@ public class Test {
 
         Random random = new Random();
 
-        for (int i1 = 0; i1 < 100; i1++) {
+        for (int i1 = 1; i1 < 100; i1++) {
             while (true) {
                 int i = random.nextInt(200) + 1;
                 if (isRepeat(i)) {
-                    Criminal criminal = new Criminal(i1, i);
+                    Criminal criminal = new Criminal(i, i1);
                     criminals.add(criminal);
                     break;
                 }
@@ -40,7 +37,7 @@ public class Test {
 
     public static boolean isRepeat(int num) {
         for (Criminal c : criminals) {
-            if (c.getNumber() == num) {
+            if (c.getLocation() == num) {
                 return false;
             }
         }
