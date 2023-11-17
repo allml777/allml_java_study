@@ -38,17 +38,46 @@ public class Test1 {
             }
         }
 
-        System.out.println(inputDate);
+        LocalDate date = LocalDate.parse(inputDate);
+        date = date.minusDays(date.getDayOfMonth()-1);
+        int year = date.getYear();
+        int month = date.getMonthValue();
+        int today = date.getDayOfMonth();
+//        System.out.println(date.getDayOfMonth());
+//        System.out.println(date);
 
-        LocalDate sld = LocalDate.parse(startDate);
+        int weekStart = date.getDayOfWeek().getValue();
+//        System.out.println(weekStart);
 
-        LocalDate eld = LocalDate.parse(inputDate);
+        System.out.println("一\t二\t三\t四\t五\t六\t日");
+        for (int i = 1; i < weekStart; i++) {
+            System.out.print("\t");
+        }
 
-        long days = ChronoUnit.DAYS.between(sld, eld);
-        int weekDay = (int) days % 7;
-        System.out.println(weekDay);
+        //只要日期的当前月值为给定的月份值 ，就执行循环体
+        while(date.getMonthValue() == month){
+            //格式化输出当前日期在月份中的第几天
+            System.out.printf("%3d",date.getDayOfMonth());
+            //当前月份日期与，给定的日期相等时，则在后面加上*
+            if(isRest(date)){
+                System.out.print("*");
+            }else{
+                System.out.print("\t");
+            }
+            //每打印一个日期后，则把当前日期向后移一天
+            date = date.plusDays(1);
+            //如果当前日期，是一个星期的星期日，则打印一个换行符。
+            if(date.getDayOfWeek().getValue() == 1) {
+                System.out.println();
+            }
+        }
+//        if(date.getDayOfWeek().getValue() != 1) System.out.println();
 
-//        System.out.println(Calendar.getInstance().getTime());
+//        for (int i = 0; i < 5; i++) {
+//            for (int i1 = 0; i1 < 7; i1++) {
+//
+//            }
+//        }
 
     }
 
@@ -70,9 +99,8 @@ public class Test1 {
     /*
     判断是否是休息日
      */
-    public static boolean isRest(String date) {
+    public static boolean isRest(LocalDate ld) {
         LocalDate fld = LocalDate.parse(firstRestDate);
-        LocalDate ld = LocalDate.parse(date);
 
         long days = ChronoUnit.DAYS.between(fld, ld);
         int judge = (int) days % 3;
