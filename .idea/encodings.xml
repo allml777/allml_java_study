@@ -3,6 +3,8 @@
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/src/com/allml/D117/Test.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/allml/D118/Test.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/allml/D165/gbkFile.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/allml/D165/utfFile.txt" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

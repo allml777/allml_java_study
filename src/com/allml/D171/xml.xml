@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml文件必须有上面这行，且只能在最上方-->
+<!--这个是根标签，只能有一个根标签-->
+
+<users>
+    <user id="10086">
+        <name>a</name>
+        <sex>1</sex>
+        <adress>dasa-123-43e</adress>
+        <password>asffnjngjandf</password>
+    </user>
+    <student>vbvb</student>
+    <teacher>ccccc</teacher>
+    <user>
+        <name>b</name>
+        <sex>0</sex>
+        <adress>aaaaae</adress>
+        <password>bbbbbb</password>
+    </user>
+</users>
